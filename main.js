@@ -15,7 +15,7 @@ const renderProduct = (title, price) => {
 
 const renderProducts = (list) => {
     const productList = list.map((item) => renderProduct(item.title, item.price)); //не много сократил запись
-    //console.log(productList);
+
     document.querySelector('.products').innerHTML = productList.join(''); //убрал запятые
 };
 
