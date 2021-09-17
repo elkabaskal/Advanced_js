@@ -84,3 +84,25 @@ class ProductItem {
 }
 
 const catalog = new ProductsList();
+
+// Классы для корзины
+
+class BasketList {
+    constructor(container = '.basket') {
+        this.container = container;
+        this._goods = [];
+        this._goodsObjects = [];
+        this.total = null;
+        this.quantity = null;
+    }
+}
+
+class BasketItem {
+    constructor(item, img = 'https://via.placeholder.com/200x150') {
+        this.id = item.id;
+        this.title = item.title;
+        this.price = item.price;
+        this.img = img;
+        this.quantity = item.quantity
+    }
+}
