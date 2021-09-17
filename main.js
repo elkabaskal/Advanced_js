@@ -30,7 +30,7 @@ class ProductsList {
 
         this._fetchGoods();
         this._render();
-        this._summary();
+        this._summation();
     }
 
     _fetchGoods() {
@@ -52,7 +52,8 @@ class ProductsList {
             block.insertAdjacentHTML('beforeend', productObject.getHTMLString())
         }
     }
-    _summary() { /*Подсчет суммы товаров в каталоге*/
+
+    _summation() { /*Подсчет суммы товаров в каталоге*/
 
         for (const i in this._goodsObjects) {
             this.sum = this.sum + this._goodsObjects[i].price;
