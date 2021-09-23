@@ -1,22 +1,9 @@
-const products = [
-    { id: 1, title: 'Notebook', price: 1000 },
-    { id: 2, title: 'Mouse', price: 100 },
-    { id: 3, title: 'Keyboard', price: 250 },
-    { id: 4, title: 'Gamepad', price: 150 },
-];
+let text = "One: 'Hi Mary.' Two: 'Oh, hi.' One: 'How are you doing?' Two: 'I'm doing alright. How about you?' One: 'Not too bad. The weather is great isn't it ? 'Two: 'Yes. It's absolutely beautiful today. 'One: 'I wish it was like this more frequently.' Two: 'Me too.' One: 'So where are you going now?' Two: 'I'm going to meet a friend of mine at the department store.' One: 'Going to do a little shopping?' Two: 'Yeah, I have to buy some presents for my parents.' One: 'What's the occasion?' Two: 'It's their anniversary.' One: 'That's great. Well, you better get going. You don't want to be late.' Two: 'I'll see you next time.' One: 'Sure.'Bye.'";
 
-const renderProduct = (title, price) => {
-    return `<div class="product-item">
-            <h3>${title}</h3>
-            <p>${price}</p>
-            <button class="by-btn">Добавить</button>
-          </div>`;
-};
+let textMod = text.replace(/'/g, '"');
 
-const renderProducts = (list) => {
-    const productList = list.map((item) => renderProduct(item.title, item.price)); //не много сократил запись
-    //console.log(productList);
-    document.querySelector('.products').innerHTML = productList.join(''); //убрал запятые
-};
+console.log(textMod);
 
-renderProducts(products);
+let textModTwo = textMod.replace(/\b"/g, "'");
+
+console.log(textModTwo);
